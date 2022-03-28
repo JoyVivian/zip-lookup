@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "eac22449-bdd5-4bf7-9f78-fb9baf499301",
+		"name": "Zero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"John\",\n    \"lastname\": \"Smith\",\n    \"zipcode\": \"02118\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/create_phrase",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create_phrase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
