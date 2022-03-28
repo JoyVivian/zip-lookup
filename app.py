@@ -61,4 +61,5 @@ class Welcome(Resource):
 api.add_resource(GetZipInfo, '/create_phrase')
 api.add_resource(Welcome, "/")
 
-app.run(port=5000)
+if __name__ == '__main__':
+    app.run(port=5000)
