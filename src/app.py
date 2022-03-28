@@ -50,6 +50,9 @@ class GetZipInfo(Resource):
 
         return result
 
+    def get(self):
+        return "Please refer to Documentation"
+
 
 api.add_resource(GetZipInfo, '/create_phrase')
 app.run(port=6000)
