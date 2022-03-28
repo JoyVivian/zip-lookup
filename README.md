@@ -22,6 +22,12 @@ This is an app that get three inputs from the front end. Specifically, the user 
 (4) Input and test the app. No need to config the backend. It was deployed on Heroku.
 
 
-# Test the code
+# 4. Test the code
 
 ! Important the Zip API only provide 10 requests for users every hour. So do not test the code more than 10 times every hour, or it will return an error.
+
+# 5. The Github Link
+
+Frontend: https://github.com/JoyVivian/zero-frontend
+
+Backend: https://github.com/JoyVivian/zip-lookup
