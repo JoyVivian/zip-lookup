@@ -41,6 +41,9 @@ class GetZipInfo(Resource):
         lastname = data['lastname']
         zipcode = data['zipcode']
 
+        print("get input")
+        print(f"firstname: {firstname}")
+
         zipcode_obj = ZipCode(zipcode)
         county_list = zipcode_obj.get_county()
         county_str = ", ".join(county_list)
