@@ -2,7 +2,7 @@ import sys
 
 sys.path.append("..")
 
-from flask import Flask, request
+from flask import Flask
 from flask_restful import Resource, Api, reqparse
 
 from src.zip_lookup.zipcode.zipcode_lookup import ZipCode
@@ -50,9 +50,13 @@ class GetZipInfo(Resource):
 
         return result
 
+
+class Welcome(Resource):
     def get(self):
         return "Please refer to Documentation"
 
 
 api.add_resource(GetZipInfo, '/create_phrase')
+api.add_resource(Welcome, "/")
+
 app.run(port=6000)
