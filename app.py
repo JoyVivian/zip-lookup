@@ -1,14 +1,16 @@
-import sys
-
-sys.path.append("..")
+# import sys
+#
+# sys.path.append("")
 
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
+from flask_cors import CORS
 
 from src.zip_lookup.zipcode.zipcode_lookup import ZipCode
 from src.zip_lookup.utils.convert_pig_latin import convert_name_to_pig_latin
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 result = ""
@@ -41,9 +43,6 @@ class GetZipInfo(Resource):
         lastname = data['lastname']
         zipcode = data['zipcode']
 
-        print("get input")
-        print(f"firstname: {firstname}")
-
         zipcode_obj = ZipCode(zipcode)
         county_list = zipcode_obj.get_county()
         county_str = ", ".join(county_list)
@@ -62,4 +61,4 @@ class Welcome(Resource):
 api.add_resource(GetZipInfo, '/create_phrase')
 api.add_resource(Welcome, "/")
 
-app.run(port=6000)
+app.run(port=5000)
