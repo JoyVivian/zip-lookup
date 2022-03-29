@@ -31,3 +31,6 @@ This is an app that get three inputs from the front end. Specifically, the user 
 Frontend: https://github.com/JoyVivian/zero-frontend
 
 Backend: https://github.com/JoyVivian/zip-lookup
+
+# 6. The Netlify Link
+https://playful-bonbon-10b1eb.netlify.app/
